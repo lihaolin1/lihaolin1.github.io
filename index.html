@@ -1,6 +1,5 @@
 <head>
 <title> KIDD: Self-Supervised Decomposition, Disentanglement and Predictionof Video Sequences while Interpreting Dynamics:A Koopman Perspective </title>
-</head>
 <style> 
 body{font-size:100%; /*32px verdana, arial, sans-serif;*/
     text-align:center;
@@ -9,40 +8,58 @@ body{font-size:100%; /*32px verdana, arial, sans-serif;*/
     display: flex;
     justify-content: space-around;
 }
-#menu { 
-font:16px verdana, arial, sans-serif; /* word size */
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
 }
-#menu, #menu li {
-list-style:none; /* delete list sign */
-padding:0; /* delete ineer boundary */
-margin:0; /* delete outer bouundry */
-width:auto
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
 }
-#menu li { 
- float:left; 
+
+div.scrollmenu a:hover {
+  background-color: #777;
 }
-#menu li a {
-display:block; /* 将链接设为块级元素 */
-padding:8px 50px; /* 设置内边距 */
-background:#3A4953; /* 设置背景色 */
-color:#fff; /* 设置文字颜色 */
-text-decoration:none; /* 去掉下划线 */
-border-right:1px solid #000; /* 在左侧加上分隔线 */
-text-align: center;
-/*align-self: center;*/
+div.Row {
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+}
+div.Column {
+    display: table-cell; /*Optional*/
+}
+div.float-left {
+    float:left;
+    width:300px; // or 33% for equal width independent of parent width
 }
 </style> 
-<body> 
-  <p>Self-Supervised Decomposition, Disentanglement and Predictionof Video Sequences while Interpreting Dynamics:A Koopman Perspective</p>
-</body>
-<body>
-  <p>Author: Armand, Sandesh</p>
-</body>
+</head>
+  <h1>Self-Supervised Decomposition, Disentanglement and Prediction of Video Sequences while Interpreting Dynamics:A Koopman Perspective</h1>
+  
+<div>
+  <div align="center" class="float-left"><a href="https://www.linkedin.com/in/armandcomas/">Armand comas</a><br>Northeastern university</br> 
+  </div>
+  <div align="center" class="float-left"><a href="https://www.linkedin.com/in/sandesh-ghimire/">Sandesh</a><br>Northeastern university</br>
+  </div>
+  <div align="center" class="float-left"><a href="https://www.linkedin.com/in/%E6%98%8A%E9%9C%96-%E6%9D%8E-502ab5118/">Haolin Li</a><br>Northeastern university</br>
+  </div>
+  <div align="center" class="float-left"><a href="https://coe.northeastern.edu/people/camps-octavia/">Octavia Camps*</a><br>Northeastern university</br>
+  </div>
+</div>
 
-<ul id = "menu">
-  <li><a href="https://www.overleaf.com/project/602a9b6ceeecb42dfaba0453#">Paper</a></li>
-  <li><a href="http://robustsystems.coe.neu.edu/">Lab Page</a></li>
-</ul> 
+<div class="scrollmenu">
+<a href="https://www.overleaf.com/project/602a9b6ceeecb42dfaba0453#">Paper</a>
+<a href="https://github.com/">Code</a>
+<a href="http://robustsystems.coe.neu.edu/">Lab Page</a>
+</div>
+
+<br>
 
 <p>Introduction</p>
 <p>This part is for introduction</p>
@@ -52,3 +69,4 @@ text-align: center;
 
 <p>Part3</p>
 <p>This part is for part3</p>
+
