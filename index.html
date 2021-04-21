@@ -100,12 +100,28 @@ ul li {
     </p>
 
 <h2>Introduction</h2>
-<img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/FiguresICCV.jpg_1.png" width="800" height="500">
-<p>Here are some example of gif</p>
+<img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/FiguresICCV.jpg_1.png" width="900" height="500">
+<p align = "justify"> The above figure shows overall architecture of DIVE, which takes the input video with missing data, infers the missingness (red), pose(green) and appearance (blue) latent variables.  Two separate decoders reconstruct and predict the future sequences.</p>
+<img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/1-self_attention_part.png" width="770" height="280"><br>Self attention tracking part.<br><br>
+<img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/2-.Disranglementpng.png " width="770" height="280"><br>Disentangle step decompose object to confidence, pose and appearance.<br><br>
+<img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/3-koopman.png" width="770" height="280"><br> Koopman opeator predict next status.<br><br>
+
+<h2>Experiments</h2>
+<p>Process of moving mnist dataset</p>
+<img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/tracking-moving-mnist.png" width="770" height="280"><br>
+
+<p>Experiments result</p>
+<img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/circular-motion.png" width="770" height="360"><br> 
 <p>example for ddpae circle, left half is ground truth, right half is ddpae result, I can also change it to KIDD compare with ddpae or etc</p>
 <img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_circle_connect.gif" width="64" height="64">
+
+<br><br><br>
+<img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/circular-motion.png" width="770" height="360"><br> 
 <p>example for ddpae crop circle, left half is ground truth, right half is ddpae result</p>
 <img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_crop_circle_connect.gif" width="64" height="64">
+
+<br><br><br>
+<img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/3d-2d-motion.png" width="770" height="360"><br> 
 <p>example for ddpae sph, left half is ground truth, right half is ddpae result</p>
 <img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_sph_connect.gif" width="64" height="64">
 <p>This part is for introduction</p>
