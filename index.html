@@ -103,13 +103,13 @@ function mapOnClick(e){
         var offsetY = e.pageY - $(imgId).offset().top;
         var x = offsetX / currentWidth;
         var y = offsetY / currentHeight;
-        alert(x + ':' + y)
+        alert(x + ':' + y);
     }
  function Show(el){
       var x = parseInt(document.getElementById('xxx').value)-el.offsetLeft;
       var y = parseInt(document.getElementById('yyy').value)-el.offsetTop;
-      <!--var x1 = parseInt(x/84*32)-->
-      <!--var y1 = parseInt(y/84*32)-->
+      <!--var x1 = parseInt(x/84*32);-->
+      <!--var y1 = parseInt(y/84*32);-->
       x = "X:"+ x;
       y = "Y:"+ y;
       alert(x+","+y); 
@@ -117,7 +117,7 @@ function mapOnClick(e){
   }
     
  function ChangeImgSrcById(Id, x,y) {
-     var new_src = +x+"_"+y
+     var new_src = x+"_"+y;
      var arrImg = document.getElementById(Id+"_show");
      if(x < 40){
         arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img"+"/"+Id+"/0_0.png";
@@ -126,9 +126,8 @@ function mapOnClick(e){
         arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img"+"/"+Id+"/1_1.png";
      }
      <!--arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img"+"/"+Id+"/"+new_src;-->
-           }
-         }
-    }
+     }
+     
     <!--ChangeImgSrcWithoutId();//调用-->
 </script>
 <!-- define script -->
