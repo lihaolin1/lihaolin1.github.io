@@ -93,6 +93,18 @@ function mouseMove(ev){
 }
 
 document.onmousemove = mouseMove;
+    
+function mapOnClick(e){
+        e = e || window.event;
+        var imgId ='#'+ $(e.target).attr('id');
+        var currentWidth = $(imgId).width();
+        var currentHeight = $(imgId).height();
+        var offsetX = e.pageX - $(imgId).offset().left;
+        var offsetY = e.pageY - $(imgId).offset().top;
+        var x = offsetX / currentWidth;
+        var y = offsetY / currentHeight;
+        alert(x + ':' + y)
+    }
 
 <!--     function ChangeImgSrcById(Id, new_src) { -->
 <!--       var arrImg = document.getElementById(Id);; -->
@@ -164,10 +176,10 @@ document.onmousemove = mouseMove;
 
 <!--<div class="sampleImage svelte-1v04nw5" style="height: 84px;padding-left:6px">-->
 <body>
-    <img id = "first_dynamic" src="./img/ddpae_circle.jpg" width="84" onclick="Show(this)" /> 
+    <img id = "first_dynamic" src="./img/ddpae_circle.jpg" width="84" onclick="mapOnClick(event)"/> <!--"Show(this)" />--> 
     <br>
     <p>Self attention result</p><br>
-    X:<input id="xxx" type="text" />  Y:<input id="yyy" type="text" />
+    <!--X:<input id="xxx" type="text" />  Y:<input id="yyy" type="text" />-->
 </body>
 <!-- </div> -->
     
