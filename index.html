@@ -105,6 +105,13 @@ function mapOnClick(e){
         var y = offsetY / currentHeight;
         alert(x + ':' + y)
     }
+ function Show(el){
+      var x = parseInt(document.getElementById('xxx').value)-el.offsetLeft;
+      var y = parseInt(document.getElementById('yyy').value)-el.offsetTop;
+      x = "X:"+x;
+      y = "Y:"+y;
+      alert(x+","+y); 
+  }
 
 <!--     function ChangeImgSrcById(Id, new_src) { -->
 <!--       var arrImg = document.getElementById(Id);; -->
@@ -176,10 +183,10 @@ function mapOnClick(e){
 
 <!--<div class="sampleImage svelte-1v04nw5" style="height: 84px;padding-left:6px">-->
 <body>
-    <img id = "first_dynamic" src="./img/ddpae_circle.jpg" width="84" onclick="mapOnClick(event)"/> <!--"Show(this)" />--> 
+    <img id = "first_dynamic" src="./img/ddpae_circle.jpg" width="84" onclick="Show(this)" />
     <br>
     <p>Self attention result</p><br>
-    <!--X:<input id="xxx" type="text" />  Y:<input id="yyy" type="text" />-->
+    X:<input id="xxx" type="text" />  Y:<input id="yyy" type="text" />
 </body>
 <!-- </div> -->
     
