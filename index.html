@@ -108,19 +108,19 @@ function mapOnClick(e){
  function Show(el){
       var x = parseInt(document.getElementById('xxx').value)-el.offsetLeft;
       var y = parseInt(document.getElementById('yyy').value)-el.offsetTop;
-      var x1 = parseInt(x/84*32)
-      var y1 = parseInt(y/84*32)
-      x = "X:"+ x1;
-      y = "Y:"+ y1;
-      alert(x+","+y + ","+el.id); 
-      ChangeImgSrcWithoutId(el.id, x1,y1);
+      <!--var x1 = parseInt(x/84*32)-->
+      <!--var y1 = parseInt(y/84*32)-->
+      x = "X:"+ x;
+      y = "Y:"+ y;
+      alert(x+","+y); 
+      <!--ChangeImgSrcWithoutId(el.id, x1,y1);-->
   }
     
  function ChangeImgSrcById(Id, x,y) {
      var new_src = +x+"_"+y
      var arrImg = document.getElementById(Id+"_show");
      if(x < 40){
-        arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img"+"/"+Id+"/0_0.png"+;
+        arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img"+"/"+Id+"/0_0.png";
         }
      else{
         arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img"+"/"+Id+"/1_1.png";
@@ -197,7 +197,7 @@ function mapOnClick(e){
     <br>
     <p>Self attention result</p><br>
     X:<input id="xxx" type="text" />  Y:<input id="yyy" type="text" />
-    <img id = "first_dynamic_show" src="" width="128">
+    <img id = "first_dynamic_show" src="https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img/first_dynamic_show/0_0.png" width="128">
 </body>
 <!-- </div> -->
     
