@@ -108,17 +108,27 @@ function mapOnClick(e){
  function Show(el){
       var x = parseInt(document.getElementById('xxx').value)-el.offsetLeft;
       var y = parseInt(document.getElementById('yyy').value)-el.offsetTop;
-      x = "X:"+x;
-      y = "Y:"+y;
-      alert(x+","+y); 
+      var x1 = parseInt(x/84*32)
+      var y1 = parseInt(y/84*32)
+      x = "X:"+ x1;
+      y = "Y:"+ y1;
+      alert(x+","+y + ","+el.id); 
+      ChangeImgSrcWithoutId(el.id, x1,y1);
   }
-
-<!--     function ChangeImgSrcById(Id, new_src) { -->
-<!--       var arrImg = document.getElementById(Id);; -->
-<!--       arrImg.src = new_src; -->
-<!--         } -->
-<!--       } -->
-<!--     } -->
+    
+ function ChangeImgSrcById(Id, x,y) {
+     var new_src = +x+"_"+y
+     var arrImg = document.getElementById(Id+"_show");
+     if(x < 40){
+        arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img"+"/"+Id+"/0_0.png"+;
+        }
+     else{
+        arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img"+"/"+Id+"/1_1.png";
+     }
+     <!--arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img"+"/"+Id+"/"+new_src;-->
+           }
+         }
+    }
     <!--ChangeImgSrcWithoutId();//调用-->
 </script>
 <!-- define script -->
@@ -183,10 +193,11 @@ function mapOnClick(e){
 
 <!--<div class="sampleImage svelte-1v04nw5" style="height: 84px;padding-left:6px">-->
 <body>
-    <img id = "first_dynamic" src="./img/ddpae_circle.jpg" width="84" onclick="Show(this)" />
+    <img id = "first_dynamic" src="./img/ddpae_circle.jpg" width="84" onclick="Show(this, id)" />
     <br>
     <p>Self attention result</p><br>
     X:<input id="xxx" type="text" />  Y:<input id="yyy" type="text" />
+    <img id = "first_dynamic_show" src="" width="128">
 </body>
 <!-- </div> -->
     
