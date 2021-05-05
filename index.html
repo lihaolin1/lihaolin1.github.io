@@ -74,7 +74,26 @@ ul li {
 
 
 <!-- define scrpit javascript -->
-<!-- <script type="text/javascript"> -->
+<script type="text/javascript">
+function mousePosition(ev){
+     if(ev.pageX || ev.pageY){
+      return {x:ev.pageX, y:ev.pageY};
+      }
+      return {
+       x:ev.clientX + document.body.scrollLeft - document.body.clientLeft,
+       y:ev.clientY + document.body.scrollTop  - document.body.clientTop
+       };
+ }
+
+function mouseMove(ev){
+    ev = ev || window.event;
+    var mousePos = mousePosition(ev);
+    document.getElementById('xxx').value = mousePos.x;
+    document.getElementById('yyy').value = mousePos.y;
+}
+
+document.onmousemove = mouseMove;
+
 <!--     function ChangeImgSrcById(Id, new_src) { -->
 <!--       var arrImg = document.getElementById(Id);; -->
 <!--       arrImg.src = new_src; -->
@@ -82,7 +101,7 @@ ul li {
 <!--       } -->
 <!--     } -->
     <!--ChangeImgSrcWithoutId();//调用-->
-<!-- </script> -->
+</script>
 <!-- define script -->
 
   <h1>Self-Supervised Decomposition, Disentanglement and Prediction of Video Sequences while Interpreting Dynamics:A Koopman Perspective</h1>
@@ -143,9 +162,10 @@ ul li {
 <img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_sph_connect.gif" width="64" height="64">
 <p>This part is for introduction</p>
 
-<div class="sampleImage svelte-1v04nw5" style="height: 84px;padding-left:6px">
-    <img src="./img/ddpae_circle.jpg" alt="" width="84" class="svelte-1v04nw5">  
-</div>
+<!--<div class="sampleImage svelte-1v04nw5" style="height: 84px;padding-left:6px">-->
+<img id = "first_dynamic" src="./img/ddpae_circle.jpg" width="84" onclick="Show(this)" /> 
+X:<input id="xxx" type="text" />  Y:<input id="yyy" type="text" />
+<!-- </div> -->
     
     
     
