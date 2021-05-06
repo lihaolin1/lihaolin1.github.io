@@ -75,24 +75,24 @@ ul li {
 
 <!-- define scrpit javascript -->
 <script type="text/javascript">
-function mousePosition(ev){
-     if(ev.pageX || ev.pageY){
-      return {x:ev.pageX, y:ev.pageY};
-      }
-      return {
-       x:ev.clientX + document.body.scrollLeft - document.body.clientLeft,
-       y:ev.clientY + document.body.scrollTop  - document.body.clientTop
-       };
- }
+function mousePosition(ev){
+     if(ev.pageX || ev.pageY){
+      return {x:ev.pageX, y:ev.pageY};
+      }
+      return {
+       x:ev.clientX + document.body.scrollLeft - document.body.clientLeft,
+       y:ev.clientY + document.body.scrollTop  - document.body.clientTop
+       };
+ }
 
-function mouseMove(ev){
-    ev = ev || window.event;
-    var mousePos = mousePosition(ev);
-    document.getElementById('xxx').value = mousePos.x;
-    document.getElementById('yyy').value = mousePos.y;
+function mouseMove(ev){
+    ev = ev || window.event;
+    var mousePos = mousePosition(ev);
+    document.getElementById('xxx').value = mousePos.x;
+    document.getElementById('yyy').value = mousePos.y;
 }
 
-document.onmousemove = mouseMove;
+document.onmousemove = mouseMove;
     
 function mapOnClick(e){
         e = e || window.event;
@@ -105,30 +105,30 @@ function mapOnClick(e){
         var y = offsetY / currentHeight;
         alert(x + ':' + y);
     }
- function Show(el){
-      var x = parseInt(document.getElementById('xxx').value)-el.offsetLeft;
-      var y = parseInt(document.getElementById('yyy').value)-el.offsetTop;
-      <!--var x1 = parseInt(x/84*32);-->
-      <!--var y1 = parseInt(y/84*32);-->
-      x = "X:"+ x;
-      y = "Y:"+ y;
-      alert(x+","+y); 
-      <!--ChangeImgSrcWithoutId(el.id, x1,y1);-->
-  }
     
- function ChangeImgSrcById(Id, x,y) {
-     var new_src = x+"_"+y;
-     var arrImg = document.getElementById(Id+"_show");
-     if(x < 40){
-        arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img"+"/"+Id+"/0_0.png";
+ function Show(el){
+      var x = parseInt(document.getElementById('xxx').value)-el.offsetLeft;
+      var y = parseInt(document.getElementById('yyy').value)-el.offsetTop;
+      
+      var x1 = parseInt(x/84*32)
+      var y1 = parseInt(y/84*32)
+      x = "X:"+ x; 
+      y = "Y:"+ y;
+      var arrImg = document.getElementById(el.id+"_show");
+      arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/"+el.id+"_show/"+x1+"_"+y1+".jpg"
+      <!--if(x1 < 40){
+        arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/first_dynamic_show/1_1.jpg";
         }
-     else{
-        arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img"+"/"+Id+"/1_1.png";
-     }
-     <!--arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img"+"/"+Id+"/"+new_src;-->
-     }
+      else{
+        arrImg.src =  "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/first_dynamic_show/0_0.jpg";
+     } -->
+     <!--alert(parseInt(x1/84*32)+","+parseInt(y1/84*32) + ","+el.id+"_show" + ","+arrImg.src);-->
+     <!--ChangeImgSrcById(el.id, x1,y1);-->
+  }
+    
+ 
      
-    <!--ChangeImgSrcWithoutId();//调用-->
+    <!-- ChangeImgSrcWithoutId(); -->
 </script>
 <!-- define script -->
 
@@ -192,12 +192,12 @@ function mapOnClick(e){
 
 <!--<div class="sampleImage svelte-1v04nw5" style="height: 84px;padding-left:6px">-->
 <body>
-    <img id = "first_dynamic" src="./img/ddpae_circle.jpg" width="84" onclick="Show(this)" />
+    <img id = "first_dynamic" src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_circle.jpg" width="84" onclick="Show(this)" />
     <br>
     <p>Self attention result</p><br>
     X:<input id="xxx" type="text" />  Y:<input id="yyy" type="text" />
-    <br>
-    <img id = "first_dynamic_show" src="https://github.com/lihaolin1/lihaolin1.github.io/tree/main/img/first_dynamic_show/0_0.jpg" width="128">
+    <br><br>
+    <img id = "first_dynamic_show" src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/first_dynamic_show/0_0.jpg" width="770">
 </body>
 <!-- </div> -->
     
