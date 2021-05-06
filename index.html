@@ -114,16 +114,12 @@ function mapOnClick(e){
       var y1 = parseInt(y/84*32)
       x = "X:"+ x; 
       y = "Y:"+ y;
-      var arrImg = document.getElementById(el.id+"_show");
-      arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/"+el.id+"_show/"+x1+"_"+y1+".jpg"
       document.getElementById('xxx').value = x1
       document.getElementById('yyy').value = y1
-      <!--if(x1 < 40){
-        arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/first_dynamic_show/1_1.jpg";
-        }
-      else{
-        arrImg.src =  "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/first_dynamic_show/0_0.jpg";
-     } -->
+      var arrImg = document.getElementById(el.id+"_show");
+      <!--alert(x1+","+y1)-->
+      arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/"+el.id+"_show/"+(x1+1)+"_"+(y1+1)+".jpg"
+      
      <!--alert(parseInt(x1/84*32)+","+parseInt(y1/84*32) + ","+el.id+"_show" + ","+arrImg.src);-->
      <!--ChangeImgSrcById(el.id, x1,y1);-->
   }
@@ -190,16 +186,18 @@ function mapOnClick(e){
 <img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/3d-2d-motion.png" width="770" height="360"><br> 
 <p>example for ddpae sph, left half is ground truth, right half is ddpae result</p>
 <img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_sph_connect.gif" width="64" height="64">
-<p>This part is for introduction</p>
+
+
+<p>This part is for interactive website</p>
 
 <!--<div class="sampleImage svelte-1v04nw5" style="height: 84px;padding-left:6px">-->
 <body>
-    <img id = "first_dynamic" src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_circle.jpg" width="84" onclick="Show(this)" />
+    <img id = "first_dynamic" src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/original_image.jpg" width="84" onclick="Show(this)" />
     <br>
     <p>Self attention result</p><br>
     X:<input id="xxx" type="text" />  Y:<input id="yyy" type="text" />
     <br><br>
-    <img id = "first_dynamic_show" src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/first_dynamic_show/0_0.jpg" width="770">
+    <img id = "first_dynamic_show" src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/combine_image.jpg" width="770">
 </body>
 <!-- </div> -->
     
