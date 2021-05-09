@@ -124,7 +124,25 @@ function mapOnClick(e){
      <!--ChangeImgSrcById(el.id, x1,y1);-->
   }
     
- 
+
+function Show_select(val){
+      var arrImg = document.getElementById("Eignvalue_result");
+      var arrImg1 = document.getElementById("dynamic_result");
+      <!--alert(arrImg)-->
+      if(val == 1){
+      	arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/circular-motion.png"
+        arrImg1.src = "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_circle_connect.gif"
+        }
+      else if(val == 2){
+       	arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/cropped-circulat-motion.png"
+        arrImg1.src = "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_crop_circle_connect.gif"
+       }
+      else{
+      	arrImg.src = "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/3d-2d-motion.png"
+        arrImg1.src = "https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_sph_connect.gif"
+      }
+     
+  }
      
     <!-- ChangeImgSrcWithoutId(); -->
 </script>
@@ -178,7 +196,7 @@ function mapOnClick(e){
 <img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_circle_connect.gif" width="64" height="64">
 
 <br><br><br>
-<img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/circular-motion.png" width="770" height="360"><br> 
+<img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/cropped-circulat-motion.png" width="770" height="360"><br> 
 <p>example for ddpae crop circle, left half is ground truth, right half is ddpae result</p>
 <img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_crop_circle_connect.gif" width="64" height="64">
 
@@ -186,6 +204,19 @@ function mapOnClick(e){
 <img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/3d-2d-motion.png" width="770" height="360"><br> 
 <p>example for ddpae sph, left half is ground truth, right half is ddpae result</p>
 <img src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_sph_connect.gif" width="64" height="64">
+
+<br><br><br>
+<select id="group" value="1" onchange="Show_select(this.value);">
+    <option value="1">Angle_1</option>
+    <option value="2">Angle_2</option>
+    <option value="3">Angle_3</option>
+</select>
+<img id = "Eignvalue_result" src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/circular-motion.png" width="770" height="380">
+<img id = "dynamic_result" src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/ddpae_circle_connect.gif" width="64" height="64">
+
+
+
+
 
 
 <p>This part is for interactive website</p>
@@ -197,7 +228,7 @@ function mapOnClick(e){
     <p>Self attention result</p><br>
     X:<input id="xxx" type="text" />  Y:<input id="yyy" type="text" />
     <br><br>
-    <img id = "first_dynamic_show" src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/combine_image.jpg" width="1400">
+    <img id = "first_dynamic_show" src="https://github.com/lihaolin1/lihaolin1.github.io/raw/main/img/combine_image.jpg" width="770">
 </body>
 <!-- </div> -->
     
